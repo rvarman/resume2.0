@@ -1,0 +1,151 @@
+<html>
+
+<head>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+
+            background-position: center;
+            font-family: sans-serif;
+        }
+
+        .menu-bar {
+
+            background-color: rgb(28, 126, 24);
+            text-align: center;
+        }
+
+        .menu-bar ul {
+
+            display: inline-flex;
+            list-style: none;
+            color: rgb(240, 245, 240);
+        }
+
+        .menu-bar ul li {
+            width: 101px;
+            margin: 11px;
+            padding: 11px;
+        }
+
+        .menu-bar ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .active,
+        .menu-bar ul li:hover {
+            background-color: #2bab0d;
+            border-radius: 2px;
+        }
+
+        .menu-bar .fa {
+            margin-right: 1px;
+        }
+
+        .sub-menu-1 {
+            display: none;
+        }
+
+        .menu-bar ul li:hover .sub-menu-1 {
+            display: block;
+            position: absolute;
+            background: rgb(0, 100, 0);
+            margin-top: 12px;
+            margin-left: -11px;
+        }
+
+        .menu-bar ul li:hover .sub-menu-1 ul {
+            display: block;
+            margin: 9px;
+        }
+
+        .menu-bar ul li:hover .sub-menu-1 ul li {
+            width: 130px;
+            padding: 11px;
+            border-bottom: 1px dotted #e2e0e4;
+            background: transparent;
+            border-radius: 0;
+            text-align: left;
+        }
+
+        .menu-bar ul li:hover .sub-menu-1 ul li:last-child {
+            border-bottom: none;
+        }
+
+        .menu-bar ul li:hover .sub-menu-1 ul li a:hover {
+            color: #bff140;
+        }
+
+        .fa-angle-right {
+            float: right;
+        }
+
+        .sub-menu-2 {
+            display: none;
+        }
+
+        .hover-me:hover .sub-menu-2 {
+            position: absolute;
+            display: block;
+            margin-top: -40px;
+            margin-left: 110px;
+            background: rgb(0, 100, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu-bar">
+        <ul>
+            <li class="active"><a href="#"><i class="fa fa-home"></i>Home</a></li>
+            <li><a href="#"><i class="fa fa-user"></i>About</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="#">BA1</a></li>
+                        <li><a href="#">BA2</a></li>
+                        <li><a href="#">BA3</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#"><i class="fa fa-clone"></i>Services</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="#">BA1</a></li>
+                        <li class="hover-me"><a href="#">BA2</a><i class="fa fa-angle-right"></i>
+                            <div class="sub-menu-2">
+                                <ul>
+                                    <li><a href="#">MA!</a></li>
+                                    <li><a href="#">MA2</a></li>
+                                    <li><a href="#">MSc1</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="hover-me"><a href="#">BA3</a><i class="fa fa-angle-right"></i>
+                            <div class="sub-menu-2">
+                                <ul>
+                                    <li><a href="#">pgdyo</a></li>
+                                    <li><a href="#">MSW</a></li>
+                                    <li><a href="#">MCom</a></li>
+                                </ul>
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#"><i class="fa fa-users"></i>Email</a></li>
+            <li><a href="#"><i class="fa fa-angellist"></i>Admission</a></li>
+            <li><a href="#"><i class="fa fa-inr"></i>TimeTable</a></li>
+            <li><a href="#"><i class="fa fa-edit"></i>Result</a></li>
+            <li><a href="#"><i class="fa fa-phone"></i>Session</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
